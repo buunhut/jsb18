@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Bài tập JS buổi</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container mb-5">
+    <h2>Cho người dùng nhập vào các số nguyên n và lưu trữ trong mảng</h2>
+    <div class="mb-2 p-2">
+      <input type="text" class="form-control" name="" id="soN" aria-describedby="helpId" placeholder="Nhập số vào">
+      <button type="button" onclick="themSoN()" class="btn btn-info text-white mt-2">Thêm số</button>
+    </div>
+
+    <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="daySoN"></div>
+    <div class="d-flex flex-wrap">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="tongCacSoDuong()" class="btn btn-success mt-1">Tổng số dương</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="tongSoDuong"></div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="demSoDuong()" class="btn btn-success mt-1">Đếm số dương</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="demSoDuong"></div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="timSoNhoNhat()" class="btn btn-success mt-1">Tìm số nhỏ nhất</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="soNhoNhat"></div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="timSoDuongNhoNhat()" class="btn btn-success mt-1">Tìm số dương nhỏ nhất</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="soDuongNhoNhat"></div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="timSoChanCuoiCung()" class="btn btn-success mt-1">Tìm số chẵn cuối cùng</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="soChanCuoiCung"></div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="doiCho()" class="btn btn-success mt-1">Đổi chỗ</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="doiCho"></div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="sapXepTangDan()" class="btn btn-success mt-1">Sắp xếp tăng dần</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="sapXepTangDan"></div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="soNguyenToDauTien()" class="btn btn-success mt-1">Tìm số nguyên tố đầu
+          tiên</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="soNguyenToDauTien"></div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="demSoNguyen()" class="btn btn-success mt-1">Đếm số nguyên</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="demSoNguyen"></div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-2">
+        <button type="button" onclick="soSanh()" class="btn btn-success mt-1">So sánh số lượng số âm và dương</button>
+        <div class="bg-success bg-opacity-50 p-3 text-white mt-1" id="soSanh"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+  <!-- <script src="./index.js"></script> -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
