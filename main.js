@@ -15,128 +15,163 @@ function themSoN() {
 }
 // tính tổng các số dương
 function tongCacSoDuong() {
-  var tongSoDuong = 0;
-  for (var i = 0; i < arraySoN.length; i++) {
-    if (arraySoN[i] > 0) {
-      tongSoDuong += arraySoN[i];
-      document.getElementById("tongSoDuong").innerHTML = tongSoDuong;
+  if (arraySoN.length > 0) {
+    var tongSoDuong = 0;
+    for (var i = 0; i < arraySoN.length; i++) {
+      if (arraySoN[i] > 0) {
+        tongSoDuong += arraySoN[i];
+        document.getElementById("tongSoDuong").innerHTML = tongSoDuong;
+      }
     }
+  } else {
+    alert("Nhập số vào bạn ơi");
   }
 }
 // đến số dương
 function demSoDuong() {
-  var demSo = 0;
-  for (var i = 0; i < arraySoN.length; i++) {
-    if (arraySoN[i] > 0) {
-      demSo++;
-      document.getElementById("demSoDuong").innerHTML = demSo;
+  if (arraySoN.length > 0) {
+    var demSo = 0;
+    for (var i = 0; i < arraySoN.length; i++) {
+      if (arraySoN[i] > 0) {
+        demSo++;
+        document.getElementById("demSoDuong").innerHTML = demSo;
+      }
     }
+  } else {
+    alert("Nhập số vào bạn ơi");
   }
 }
 //tìm số nhỏ nhất
 function timSoNhoNhat() {
-  var sortN = arraySoN.sort(function (a, b) {
-    return a - b;
-  });
-  document.getElementById("soNhoNhat").innerHTML = sortN[0];
+  if (arraySoN.length > 0) {
+    var sortN = arraySoN.sort(function (a, b) {
+      return a - b;
+    });
+    document.getElementById("soNhoNhat").innerHTML = sortN[0];
+  } else {
+    alert("Nhập số vào bạn ơi");
+  }
 }
 //tìm số dương lớn nhất
 function timSoDuongNhoNhat() {
-  var sortN = arraySoN.sort(function (a, b) {
-    return a - b;
-  });
-  ketQua = [];
-  for (var i = 0; i < arraySoN.length; i++) {
-    if (arraySoN[i] > 0) {
-      ketQua.push(arraySoN[i]);
+  if (arraySoN.length > 0) {
+    var sortN = arraySoN.sort(function (a, b) {
+      return a - b;
+    });
+    ketQua = [];
+    for (var i = 0; i < arraySoN.length; i++) {
+      if (arraySoN[i] > 0) {
+        ketQua.push(arraySoN[i]);
+      }
     }
+    document.getElementById("soDuongNhoNhat").innerHTML = ketQua[0];
+  } else {
+    alert("Nhập số vào bạn ơi");
   }
-  document.getElementById("soDuongNhoNhat").innerHTML = ketQua[0];
 }
 // tìm số chẵn cuối cùng
 function timSoChanCuoiCung() {
-  // var arraySoChan = [];
-  // var n = 0;
-  for (var i = arraySoN.length; i >= 0; i--) {
-    if (arraySoN[i] % 2 == 0) {
-      document.getElementById("soChanCuoiCung").innerHTML = arraySoN[i];
-      break;
-    } else {
-      document.getElementById("soChanCuoiCung").innerHTML =
-        "-1 (Ko tìm thấy số chẵn)";
+  if (arraySoN.length > 0) {
+    for (var i = arraySoN.length; i >= 0; i--) {
+      if (arraySoN[i] % 2 == 0) {
+        document.getElementById("soChanCuoiCung").innerHTML = arraySoN[i];
+        break;
+      } else {
+        document.getElementById("soChanCuoiCung").innerHTML =
+          "-1 (Ko tìm thấy số chẵn)";
+      }
     }
+  } else {
+    alert("Nhập số vào bạn ơi");
   }
 }
 // đổi chỗ
 function doiCho() {
-  document.getElementById("doiCho").innerHTML = chiaOi(arraySoN.reverse());
+  if (arraySoN.length > 0) {
+    document.getElementById("doiCho").innerHTML = chiaOi(arraySoN.reverse());
+  } else {
+    alert("Nhập số vào bạn ơi");
+  }
 }
 // xắp sếp tăng dần
 function sapXepTangDan() {
-  var sapXepTangDan = arraySoN.sort(function (a, b) {
-    return a - b;
-  });
-  document.getElementById("sapXepTangDan").innerHTML = chiaOi(sapXepTangDan);
+  if (arraySoN.length > 0) {
+    var sapXepTangDan = arraySoN.sort(function (a, b) {
+      return a - b;
+    });
+    document.getElementById("sapXepTangDan").innerHTML = chiaOi(sapXepTangDan);
+  } else {
+    alert("Nhập số vào bạn ơi");
+  }
 }
 // tìm số nguyên tố đầu tiên
 function soNguyenToDauTien() {
-  var soTimdc = [];
-  var n = 1;
-  //check xem có phải snt ko
-  function check(z) {
-    for (var i = 2; i < z; i++) {
-      if (z % i == 0) {
-        var check = "ko";
-        break;
+  if (arraySoN.length > 0) {
+    var soTimdc = [];
+    var n = 1;
+    //check xem có phải snt ko
+    function check(z) {
+      for (var i = 2; i < z; i++) {
+        if (z % i == 0) {
+          var check = "ko";
+          break;
+        }
+      }
+      if (check != "ko") {
+        soTimdc.push(z);
       }
     }
-    if (check != "ko") {
-      soTimdc.push(z);
-    }
-  }
-  for (var x = 0; x <= arraySoN.length; x++) {
-    if (arraySoN[x] >= 2) {
-      check(arraySoN[x]);
-      if (soTimdc.length <= 0) {
-        document.getElementById("soNguyenToDauTien").innerHTML =
-          "Trong dãy số không có số nguyên tố";
-      } else {
-        document.getElementById("soNguyenToDauTien").innerHTML = soTimdc;
-        break;
+    for (var x = 0; x <= arraySoN.length; x++) {
+      if (arraySoN[x] >= 2) {
+        check(arraySoN[x]);
+        if (soTimdc.length <= 0) {
+          document.getElementById("soNguyenToDauTien").innerHTML =
+            "Trong dãy số không có số nguyên tố";
+        } else {
+          document.getElementById("soNguyenToDauTien").innerHTML = soTimdc;
+          break;
+        }
       }
     }
+  } else {
+    alert("Nhập số vào bạn ơi");
   }
 }
 // đếm số nguyên
 function demSoNguyen() {
-  var demSoNguyen = 0;
-  arraySoN.forEach(function (item, idex) {
-    if (Math.floor(item) / item == 1) {
-      demSoNguyen++;
-    }
-  });
-  document.getElementById("demSoNguyen").innerHTML = demSoNguyen;
+  if (arraySoN.length > 0) {
+    var demSoNguyen = 0;
+    arraySoN.forEach(function (item, idex) {
+      if (Math.floor(item) / item == 1) {
+        demSoNguyen++;
+      }
+    });
+    document.getElementById("demSoNguyen").innerHTML = demSoNguyen;
+  } else {
+    alert("Nhập số vào bạn ơi");
+  }
 }
 // so sánh số lượng số âm và số lượng số dương
 function soSanh() {
-  var soAm = [];
-  var soDuong = [];
-  for (var i = 0; i < arraySoN.length; i++) {
-    if (arraySoN[i] >= 0) {
-      soDuong.push(arraySoN[i]);
-    } else {
-      soAm.push(arraySoN[i]);
+  if (arraySoN.length > 0) {
+    var soAm = [];
+    var soDuong = [];
+    for (var i = 0; i < arraySoN.length; i++) {
+      if (arraySoN[i] >= 0) {
+        soDuong.push(arraySoN[i]);
+      } else {
+        soAm.push(arraySoN[i]);
+      }
     }
-  }
-  if (soDuong.length > soAm.length) {
-    var ketQuaSoSanh = "Số lượng số dương nhiều hơn số lượng số âm";
-  } else if (soDuong.length < soAm.length) {
-    var ketQuaSoSanh = "Số lượng số âm nhiều hơn số lượng số dương";
+    if (soDuong.length > soAm.length) {
+      var ketQuaSoSanh = "Số lượng số dương nhiều hơn số lượng số âm";
+    } else if (soDuong.length < soAm.length) {
+      var ketQuaSoSanh = "Số lượng số âm nhiều hơn số lượng số dương";
+    } else {
+      var ketQuaSoSanh = "Số lượng số dương bằng số lượng số âm";
+    }
+    document.getElementById("soSanh").innerHTML = ketQuaSoSanh;
   } else {
-    var ketQuaSoSanh = "Số lượng số dương bằng số lượng số âm";
+    alert("Nhập số vào bạn ơi");
   }
-  document.getElementById("soSanh").innerHTML = ketQuaSoSanh;
 }
-
-
-
